@@ -31,3 +31,8 @@ set background=dark
 " Get rid of annoying bells
 set noerrorbells
 set novisualbell
+
+" Show space errors and trailing whitespace.
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
+autocmd Syntax * syn match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
