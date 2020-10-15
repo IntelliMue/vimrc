@@ -32,7 +32,10 @@ set background=dark
 set noerrorbells
 set novisualbell
 
-" Show space errors and trailing whitespace.
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
-autocmd Syntax * syn match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+" Show space errors and whitespace.
+hi Tab ctermbg=yellow
+match Tab /\t/
+hi ColorColumn ctermbg=darkgreen
+set colorcolumn=81
+hi ExtraWhitespace ctermbg=red
+match ExtraWhitespace /\s\+$/
